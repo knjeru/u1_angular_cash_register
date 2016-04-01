@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <h2>Menu:</h2>
+    <br>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" ng-click="checkRegister(pizza)" ng-model="pizza">{{pizza.name}} - {{pizza.price | currency}}</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" ng-click="checkRegister(salad)" ng-model="salad">{{salad.name}} - {{salad.price | currency}}</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" ng-click="checkRegister(burger)" ng-model="burger">{{burger.name}} - {{burger.price | currency}}</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" ng-click="checkRegister(chzburger)" ng-model="chzburger">{{chzburger.name}} - {{chzburger.price | currency}}</button>
+    </div>
+  </div>
+  <br><br>
+  <hr>
+  <div class="row">
+    <div class="col-md-5 checkout">
+      <h2>Your Order:</h2><br>
+        <p ng-repeat="item in register track by $index">{{item.name}} x{{item.quantity}} ({{item.price | currency:'$':2}})</p>
+    </div>
+    <div class="col-md-5">
+      <h3>Tax: {{tax | currency:'$':2}}</h3>
+      <h2>Total: {{gTotal | currency:'$':2}}</h2>
+    </div>
+  </div>
+</div>

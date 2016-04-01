@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <li ng-repeat="item in checkoutList">
+        <p>{{item.name}} x{{item.quantity}} ({{item.priceTotal}})</p>
+      </li>
+    </div>
+    <div class="col-md-6">
+      <p>Tax: {{subtotal * .0463}}</p>
+      <p>Total: {{tax + currTotal}}</p>
+    </div>
+  </div>
+</div>
